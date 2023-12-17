@@ -1,12 +1,26 @@
 services:
-  mysqldb:
+  db-dev:
     image: mysql:8.0.35-debian
     environment:
       - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_DATABASE=MySQL
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=db4dev$
     ports:
       - 3306:3306
     volumes:
       - db:/var/lib/mysql
+  app:
+    depends_on:
+      - db-dev
+    image: test
+    ports:
+      - 4000:4000
+    environment:
+      - DB_HOST=db-dev
+      - DB_USER=admin
+      - DB_PASSWORD=db4dev$
+      - DB_NAME=MySQL
+      - DB_PORT=3306
 volumes:
   db:

@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 const port = process.env.PORT || 4000;
 const app = express();
 
+console.log(dbconfig);
 const connection = await mysql.createConnection({
   host: dbconfig.HOST,
   user: dbconfig.USER,
@@ -60,7 +61,6 @@ app.patch("/users", async (req, res) => {
   if (uid) {
     params.push(uid);
   }
-  console.log(params);
   await connection.query(
     `UPDATE USERS
     SET ${name?age?"name = ?,age = ?":"name = ?":""}
