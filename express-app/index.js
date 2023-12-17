@@ -50,11 +50,22 @@ app.delete("/users/:uid", async (req, res) => {
 
 app.patch("/users", async (req, res) => {
   let { uid, name, age } = req.body;
+  let params = [];
+  if (name) {
+    params.push(name);
+  }
+  if (age) {
+    params.push(age);
+  }
+  if (uid) {
+    params.push(uid);
+  }
+  console.log(params);
   await connection.query(
     `UPDATE USERS
-    SET name = ?, age = ?
+    SET ${name?age?"name = ?,age = ?":"name = ?":""}
     WHERE uid = ?;`,
-    [name, age,uid]
+    params
   );
   res.send("update success");
 });
