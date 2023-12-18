@@ -24,7 +24,7 @@ $ git clone https://github.com/Patiyut1807/SDPx-Lab/tree/main/express-app
 $ cd express-app
 ```
 
-- 2.run this command in terminal waiting for complete
+- 2.run this command in terminal and waiting for complete
 
 ```bash
 $ docker build -t test
@@ -36,5 +36,6 @@ $ docker build -t test
 $ docker compose up
 ```
 
-- 4.เสร็จละ ง่ายเกิน  
+- 4.เสร็จละ ง่ายเกิน
+
   ไว้ที่เหลือเดี๋ยวมาอธิบายว่าทำไรไป
