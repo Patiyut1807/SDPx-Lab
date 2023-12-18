@@ -27,7 +27,7 @@ $ cd express-app
 - 2.run this command in terminal and waiting for complete
 
 ```bash
-$ docker build -t test
+$ docker build -t test .
 ```
 
 - 3.run this command for start and run app with configs in compose.yaml
