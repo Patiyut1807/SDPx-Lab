@@ -6,13 +6,13 @@
   check docker is valid
 
 ```bash
-docker --version
+$ docker --version
 ```
 
 - Clone this repository
 
 ```bash
-git clone https://github.com/Patiyut1807/SDPx-Lab/tree/main/express-app
+$ git clone https://github.com/Patiyut1807/SDPx-Lab/tree/main/express-app
 ```
 
 ### Get start
@@ -21,19 +21,19 @@ git clone https://github.com/Patiyut1807/SDPx-Lab/tree/main/express-app
   if not, use this command
 
 ```bash
-cd express-app
+$ cd express-app
 ```
 
 - 2.run this command in terminal waiting for complete
 
 ```bash
-docker build -t test
+$ docker build -t test
 ```
 
 - 3.run this command for start and run app with configs in compose.yaml
 
 ```bash
-docker compose up
+$ docker compose up
 ```
 
 - 4.เสร็จละ ง่ายเกิน  
