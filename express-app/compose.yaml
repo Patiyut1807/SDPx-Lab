@@ -19,7 +19,7 @@ services:
     restart: always
     depends_on:
       - db-dev
-    image: test
+    image: express-app
     ports:
       - 8081:4000
     environment:
@@ -49,7 +49,7 @@ services:
     restart: always
     depends_on:
       - db-test
-    image: test
+    image: express-app
     ports:
       - 8082:4000
     environment:
